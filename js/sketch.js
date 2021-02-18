@@ -1,5 +1,7 @@
 
 let title = "Turn off the light!! I want to SLEEP!!"
+let subTitle = "don't you dare press the space bar"
+let altTitle = "oh no"
 var possibleX = [900,620,1290,1900,2480,2600,3000];
 var possibleY = [1420,2000,1050,1650,700,2250,1270];
 let num = possibleX.length;
@@ -47,9 +49,15 @@ background(0);
 // image setup
 image(floorPlan,2000,1500,3300,2550);
 
+fill(50);
+noStroke();
+textSize(75);
+text(subTitle,1050,600);
+
 fill(200,150,100);
 textSize(100);
 text(title,1280,500);
+
 
 
   fill(100);
@@ -76,5 +84,27 @@ text(title,1280,500);
          ellipse(possibleX[i],possibleY[i],r,r);
          }
   }
+
+  if(keyIsPressed){
+    background(255);
+    fill(0);
+    textSize(100);
+    text(altTitle,1280,500);
+
+    image(floorPlan,2000,1500,3300,2550);
+
+    fill(220);
+    textSize(60);
+    text('bed lamp',possibleX[0],possibleY[0]);
+    text('table lamp',possibleX[1],possibleY[1]);
+    text('bathroom',possibleX[2],possibleY[2]);
+    text('hallway',possibleX[3],possibleY[3]);
+    text('doorway',possibleX[4],possibleY[4]);
+    text('living room',possibleX[5],possibleY[5]);
+    text('kitchen',possibleX[6],possibleY[6]);
+
+  }
+
+
 
 }
